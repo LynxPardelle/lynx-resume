@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="error-page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page Not Found - Alec Jonathan Montaño Romero's Portfolio" />
+  <meta name="keywords" content="Alec Montaño, Full‑Stack Developer, Data Engineer, AI Engineer, 404 Error" />
+  <meta name="author" content="Alec Jonathan Montaño Romero" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Page Not Found | Alec Montaño</title>
+  <!-- Google Icons & Bootstrap -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link href="styles.css" rel="stylesheet">
+
+  <!-- Redirige al index.html después de 60 s -->
+  <meta http-equiv="refresh" content="60; url=/index.html">
+</head>
+
+<body class="error-page">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg px-3" role="navigation" aria-label="Main">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="home-link">Alec&nbsp;Montaño</a>
+      <button class="navbar-toggler text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-icons">menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#" id="nav-home">Home</a></li>
+          <li class="nav-item">
+            <button class="btn btn-danger btn-sm d-flex align-items-center" id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+              <span class="material-icons me-1">translate</span>
+              <span id="lang-label">ES</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="error-main">
+    <div class="error-container">
+      <!-- English -->
+      <div lang="en">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-description">
+          Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+        </p>
+        <p class="error-description">
+          You will be redirected to the home page in 60 seconds. If you want to go back now, click the button below.
+        </p>
+        <a href="#" class="btn btn-home" id="btn-home-en">
+          <span class="material-icons">home</span>
+          Back to Home
+        </a>
+      </div>
+
+      <!-- Spanish -->
+      <div lang="es" style="display: none;">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Página No Encontrada</h1>
+        <p class="error-description">
+          ¡Ups! La página que buscas no existe. Podría haber sido movida, eliminada, o ingresaste una URL incorrecta.
+        </p>
+        <p class="error-description">
+          Serás redirigido a la página de inicio en 60 segundos. Si quieres volver ahora, haz clic en el botón de abajo.
+        </p>
+        <a href="#" class="btn btn-home" id="btn-home-es">
+          <span class="material-icons">home</span>
+          Volver al Inicio
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="error-footer">
+    &copy; 2025 Alec Jonathan Montaño Romero &mdash; Built with <span class="material-icons accent">favorite</span> and Bootstrap.
+  </footer>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Error Page Script -->
+  <script src="js/error-page.js"></script>
+  
+  <!-- Language Toggle Script -->
+  <script src="js/language-toggle.js"></script>
+
+</body>
+</html>

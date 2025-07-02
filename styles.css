@@ -1,0 +1,193 @@
+/* Brand palette */
+:root {
+  --black: #0d0d0d;
+  --white: #f8f9fa;
+  --red: #ff3b3f;
+  --gold: #ffcc00;
+}
+
+/* Base */
+*,*::before,*::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 56px; /* space for fixed navbar */
+}
+
+/* Navbar */
+nav {
+  background-color: #000;
+  border-bottom: 2px solid var(--gold);
+}
+nav .nav-link, nav .navbar-brand {
+  color: var(--gold) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+nav .nav-link:hover { color: var(--red) !important; }
+
+/* Sections */
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid #222;
+}
+h1,h2,h3,h4 {
+  color: var(--gold);
+  font-weight: 700;
+}
+.accent { color: var(--red); }
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.material-icons { vertical-align: middle; }
+
+/* Experience timeline */
+.job-title { font-weight: 600; color: var(--gold); }
+.job-duration { font-style: italic; color: var(--red); }
+
+/* Skills chips */
+.chip {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  margin: 0.15rem;
+  font-size: .85rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* Accessibility: Focus styles */
+a:focus, button:focus {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* ===== ERROR PAGE STYLES ===== */
+/* Error page specific body styles */
+body.error-page {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Error page HTML height */
+html.error-page {
+  height: 100%;
+}
+
+/* Main content for error page */
+main.error-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+}
+
+/* Error section */
+.error-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(255, 59, 63, 0.3);
+}
+
+.error-title {
+  font-size: 2.5rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.error-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.btn-home {
+  background-color: var(--gold);
+  color: var(--black);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-home:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* Error page footer */
+footer.error-footer {
+  background-color: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+/* Responsive for error page */
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 5rem;
+  }
+  .error-title {
+    font-size: 1.8rem;
+  }
+  .error-description {
+    font-size: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-container > * {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.error-container > *:nth-child(2) { animation-delay: 0.1s; }
+.error-container > *:nth-child(3) { animation-delay: 0.2s; }
+.error-container > *:nth-child(4) { animation-delay: 0.3s; }
+.error-container > *:nth-child(5) { animation-delay: 0.4s; }

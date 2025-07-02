@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Curriculum Vitae of Alec Jonathan Montaño Romero – Senior Full‑Stack Developer & Data/AI Engineer." />
+  <meta name="keywords" content="Alec Montaño, Full‑Stack Developer, Data Engineer, AI Engineer, Angular, Node.js, AWS, Python, TypeScript" />
+  <meta name="author" content="Alec Jonathan Montaño Romero" />
+  <link rel="canonical" href="https://lynxpardelle.com/cv" />
+  <title>Alec Montaño | Full‑Stack & Data/AI Engineer</title>
+  <!-- Google Icons & Bootstrap -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link href="styles.css" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alec Montaño | Full‑Stack & Data/AI Engineer" />
+  <meta property="og:description" content="Senior Full‑Stack Developer with expertise in Data Engineering and AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lynxpardelle.com/cv" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top px-3" role="navigation" aria-label="Main">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Alec&nbsp;Montaño</a>
+      <button class="navbar-toggler text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-icons">menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        
+          <li class="nav-item ms-2">
+            <button class="btn btn-danger btn-sm d-flex align-items-center" id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+              <span class="material-icons me-1">translate</span>
+              <span id="lang-label">ES</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="content">
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section container py-5">
+      <!-- English -->
+      <div lang="en">
+        <h2><span class="material-icons accent">person</span> About</h2>
+        <p class="mb-3">
+          <strong>Alec Jonathan Montaño Romero</strong> is an <span class="accent">experienced Full‑Stack Developer</span> with expertise in 
+          improving large web applications using clean code and SOLID principles. Skilled in developing and deploying web applications, 
+          with a focus on front‑end design to enhance user experience and implementing the best architecture patterns on the back‑end side.
+        </p>
+        <p class="mb-3">
+          Passionate about <span class="accent">Data Engineering and AI</span>, with experience in handling large‑scale data pipelines using Python, SQL, 
+          and cloud‑based ETL processes. Knowledgeable in Machine Learning frameworks like TensorFlow, PyTorch, and Scikit‑Learn, 
+          as well as data visualization tools such as Power BI and Matplotlib.
+        </p>
+        <p class="mb-3">
+          A <span class="accent">proactive leader and mentor</span>, with experience guiding teams in the implementation of best coding practices, 
+          architectural decisions, and problem‑solving strategies. Committed to fostering a collaborative work environment, 
+          ensuring efficient teamwork and delivering high‑quality results as fast as possible.
+        </p>
+      </div>
+      <!-- Spanish -->
+      <div lang="es">
+        <h2><span class="material-icons accent">person</span> Sobre mí</h2>
+        <p class="mb-3">
+          <strong>Alec Jonathan Montaño Romero</strong> es un <span class="accent">Desarrollador Full‑Stack experimentado</span> con experiencia en 
+          mejorar aplicaciones web de gran escala utilizando código limpio y principios SOLID. Especializado en desarrollar y desplegar aplicaciones web, 
+          con enfoque en diseño front‑end para mejorar la experiencia del usuario e implementar los mejores patrones de arquitectura en el back‑end.
+        </p>
+        <p class="mb-3">
+          Apasionado por la <span class="accent">Ingeniería de Datos e IA</span>, con experiencia en el manejo de pipelines de datos de gran escala usando Python, SQL 
+          y procesos ETL basados en la nube. Con conocimientos en frameworks de Machine Learning como TensorFlow, PyTorch y Scikit‑Learn, 
+          así como herramientas de visualización de datos como Power BI y Matplotlib.
+        </p>
+        <p class="mb-3">
+          <span class="accent">Líder y mentor proactivo</span>, con experiencia guiando equipos en la implementación de mejores prácticas de codificación, 
+          decisiones arquitectónicas y estrategias de resolución de problemas. Comprometido con fomentar un ambiente de trabajo colaborativo, 
+          asegurando trabajo en equipo eficiente y entregando resultados de alta calidad lo más rápido posible.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section container py-5">
+      <!-- English -->
+      <div lang="en">
+        <h2><span class="material-icons accent">work</span> Experience</h2>
+
+        <h3 class="job-title">HK Consulting — Software Developer Sr. & Product Engineer <span class="job-duration">Jul 2024 – Present</span></h3>
+        <ul class="mb-4">
+          <li>Developed and optimized both backend and frontend for a large‑scale school management platform using Node.js, TypeScript, and jQuery, improving performance and maintainability.</li>
+          <li>Designed and implemented new features while integrating backend services with AWS, Go‑based microservices, and audio devices, ensuring seamless connectivity.</li>
+          <li>Contributed to the architecture and performance optimization of a React‑based platform, leveraging expertise in Angular to bring a more structured approach.</li>
+          <li>Led a partial migration from JavaScript to TypeScript, significantly improving maintainability and performance by refactoring controllers, services, and routes.</li>
+          <li>Increased backend test coverage by 25% by writing unit tests with Jest, enhancing system reliability.</li>
+          <li>Managed development tasks and sprint planning using Jira and SCRUM methodology, ensuring efficient project execution.</li>
+        </ul>
+
+        <h3 class="job-title">Jobsity — Senior Front‑End Developer <span class="job-duration">Jan 2024 – Jul 2024</span></h3>
+        <ul class="mb-4">
+          <li>Contributed to the implementation of a large‑scale redesign for a course platform using Angular 18, ensuring a seamless and modernized UI.</li>
+          <li>Provided guidance on best practices in Angular, improving code structure and maintainability within the development team.</li>
+          <li>Optimized responsive design using Flexbox and Media Queries, enhancing mobile usability and user experience.</li>
+          <li>Utilized SASS for scalable and maintainable styling, improving code organization.</li>
+          <li>Assisted in accessibility validation using JAWS, supporting efforts to implement ARIA labels and meet zoom level standards (400%).</li>
+          <li>Developed unit tests with Jasmine and Karma, helping achieve 90%+ test coverage and improving code reliability.</li>
+          <li>Worked within an Agile/SCRUM environment, managing tasks with Jira to ensure timely delivery.</li>
+        </ul>
+
+        <h3 class="job-title">Stand8 — Senior Web Developer <span class="job-duration">Jul 2023 – Jan 2024</span></h3>
+        <ul class="mb-4">
+          <li>Contributed to the complete redesign and migration of a mobile application to a web‑based platform for a major Mexican company using Angular, ensuring a seamless transition while reviewing and adapting key mobile features.</li>
+          <li>Led the adoption and implementation of NgRx state management, developing the architecture, integrating it into the project, and providing training sessions to ensure long‑term maintainability.</li>
+          <li>Integrated and leveraged ngx‑bootstrap expanded features, a library developed by me, to enhance the functionality and streamline the design implementation process, improving efficiency and UI consistency.</li>
+          <li>Utilized SASS, responsive design techniques (Flexbox, Media Queries), and a modular component structure to optimize mobile usability.</li>
+          <li>Successfully upgraded a web application from Angular 8 to Angular 16 in under a week, resolving all dependency conflicts, replacing deprecated libraries, and introducing optimized solutions without affecting the UI/UX.</li>
+          <li>Refactored large data processing workflows, implementing chunk‑based loading techniques that reduced processing times from 30 minutes to just seconds, significantly improving performance and usability.</li>
+          <li>Worked in an Agile/SCRUM environment, managing tasks and sprints using Jira.</li>
+        </ul>
+
+        <h3 class="job-title">ABDP — Front‑End Developer <span class="job-duration">Nov 2022 – Jan 2024</span></h3>
+        <ul class="mb-4">
+          <li>Redesigned and restructured a large‑scale web application for an insurance company using Angular 15, later upgrading it to Angular 16. Led frontend architecture improvements, ensuring better maintainability and scalability.</li>
+          <li>Acted as the Angular expert within the project, providing guidance on best practices and optimizing UI development, often working without finalized design mockups.</li>
+          <li>Resolved major compatibility issues during the Angular 16 upgrade by refactoring deprecated dependencies and developing custom internal libraries to replace outdated third‑party solutions.</li>
+          <li>Enhanced the development workflow by integrating ngx‑bootstrap expanded features, significantly improving design implementation and providing developers with better control over UI components.</li>
+          <li>Designed and implemented internal development libraries, optimizing team workflows, extending Angular's capabilities, and mentoring team members on their usage and customization.</li>
+        </ul>
+
+        <h3 class="job-title">Alseam — Full‑Stack Developer & SRE <span class="job-duration">Jul 2021 – Nov 2022</span></h3>
+        <ul class="mb-4">
+          <li>Designed and developed internal systems, dashboards, and planners for various clients using the MEAN stack (MongoDB, Express, Angular, Node.js), ensuring scalable and efficient solutions.</li>
+          <li>Redesigned and modernized UI/UX, transforming outdated interfaces into responsive, visually intuitive experiences with improved contrast, spacing, and accessibility for all screen sizes.</li>
+          <li>Implemented advanced UI components using Angular, Bootstrap, Material UI, and ngx‑bootstrap expanded features, enhancing design consistency and developer efficiency.</li>
+          <li>Developed RESTful APIs with JWT authentication, enabling secure and seamless communication between the front‑end and back‑end systems.</li>
+          <li>Configured and optimized NGINX and Digital Ocean servers, improving performance and securing access using UFW firewall rules.</li>
+        </ul>
+
+        <h3 class="job-title">Katze Records — Full‑Stack Developer & SRE <span class="job-duration">Jan 2018 – Apr 2021</span></h3>
+        <ul class="mb-4">
+          <li>Planned, designed, and developed Katze Community, a Single Page Application (SPA) built with the MEAN stack (MongoDB, Express, Angular, Node.js), handling the full development lifecycle from concept to deployment.</li>
+          <li>Built and currently maintain a DigitalOcean server with NGINX, implementing load balancers and reverse proxy to optimize performance and scalability.</li>
+          <li>Integrated JWT authentication to ensure secure user access and protected API endpoints.</li>
+          <li>Configured UFW firewall rules, enhancing security and restricting unauthorized access.</li>
+        </ul>
+
+        <h3 class="job-title">Freelance — Full‑Stack Dev | SRE | ETL Engineer | Data & AI <span class="job-duration">2018 – Present</span></h3>
+        <ul class="mb-4">
+          <li>Led the design, development, and deployment of web applications for diverse clients, building scalable, high‑performance solutions from scratch using Angular, Node.js, NestJS, Python, Django, Flask, C# .NET, MongoDB, MySQL, and other modern technologies.</li>
+          <li>Managed multiple development teams, ensuring the successful delivery of high‑quality products by establishing effective workflows, code review processes, and best development practices.</li>
+          <li>Provided expert technical mentorship and consulting, guiding teams and junior developers on Angular, TypeScript, state management (NgRx), API design, database optimization, cloud deployment, and DevOps.</li>
+          <li>Configured and maintained cloud infrastructure using NGINX, Digital Ocean, Google Cloud, AWS, Azure, Kubernetes, and Docker, ensuring performance, security, and scalability.</li>
+          <li>Integrated DevOps practices by implementing CI/CD pipelines with GitHub Actions, improving deployment efficiency and reducing downtime.</li>
+          <li>Designed and implemented Neural Networks using Machine Learning to improve data usage and optimize decision‑making processes.</li>
+        </ul>
+      </div>
+
+      <!-- Spanish -->
+      <div lang="es">
+        <h2><span class="material-icons accent">work</span> Experiencia</h2>
+
+        <h3 class="job-title">HK Consulting — Desarrollador Sr. & Product Engineer <span class="job-duration">Jul 2024 – Presente</span></h3>
+        <ul class="mb-4">
+          <li>Desarrollé y optimicé backend y frontend de una plataforma escolar de gran escala usando Node.js, TypeScript y jQuery, mejorando rendimiento y mantenibilidad.</li>
+          <li>Diseñé e implementé nuevas características integrando servicios backend con AWS, microservicios en Go y dispositivos de audio, asegurando conectividad perfecta.</li>
+          <li>Contribuí a la arquitectura y optimización de rendimiento de una plataforma basada en React, aprovechando experiencia en Angular para aportar un enfoque más estructurado.</li>
+          <li>Lideré la migración parcial de JavaScript a TypeScript, mejorando significativamente mantenibilidad y rendimiento refactorizando controladores, servicios y rutas.</li>
+          <li>Aumenté la cobertura de pruebas backend en 25% escribiendo pruebas unitarias con Jest, mejorando la confiabilidad del sistema.</li>
+          <li>Administré tareas de desarrollo y planificación de sprints usando Jira y metodología SCRUM, asegurando ejecución eficiente del proyecto.</li>
+        </ul>
+
+        <h3 class="job-title">Jobsity — Desarrollador Front‑End Sr. <span class="job-duration">Ene 2024 – Jul 2024</span></h3>
+        <ul class="mb-4">
+          <li>Contribuí a la implementación de un rediseño de gran escala para una plataforma de cursos usando Angular 18, asegurando una UI moderna y fluida.</li>
+          <li>Proporcioné orientación sobre mejores prácticas en Angular, mejorando estructura de código y mantenibilidad dentro del equipo de desarrollo.</li>
+          <li>Optimicé diseño responsivo usando Flexbox y Media Queries, mejorando usabilidad móvil y experiencia de usuario.</li>
+          <li>Utilicé SASS para estilos escalables y mantenibles, mejorando organización de código.</li>
+          <li>Asistí en validación de accesibilidad usando JAWS, apoyando esfuerzos para implementar etiquetas ARIA y cumplir estándares de nivel de zoom (400%).</li>
+          <li>Desarrollé pruebas unitarias con Jasmine y Karma, ayudando a lograr 90%+ de cobertura de pruebas y mejorando confiabilidad del código.</li>
+          <li>Trabajé en un ambiente Ágil/SCRUM, administrando tareas con Jira para asegurar entrega oportuna.</li>
+        </ul>
+
+        <h3 class="job-title">Stand8 — Desarrollador Web Sr. <span class="job-duration">Jul 2023 – Ene 2024</span></h3>
+        <ul class="mb-4">
+          <li>Contribuí al rediseño completo y migración de una aplicación móvil a plataforma web para una empresa mexicana importante usando Angular, asegurando transición fluida mientras revisaba y adaptaba características móviles clave.</li>
+          <li>Lideré la adopción e implementación de gestión de estado NgRx, desarrollando la arquitectura, integrándola al proyecto y proporcionando sesiones de entrenamiento para asegurar mantenibilidad a largo plazo.</li>
+          <li>Integré y aproveché ngx‑bootstrap expanded features, una librería desarrollada por mí, para mejorar funcionalidad y simplificar el proceso de implementación de diseño, mejorando eficiencia y consistencia de UI.</li>
+          <li>Utilicé SASS, técnicas de diseño responsivo (Flexbox, Media Queries) y estructura de componentes modular para optimizar usabilidad móvil.</li>
+          <li>Actualicé exitosamente una aplicación web de Angular 8 a Angular 16 en menos de una semana, resolviendo todos los conflictos de dependencias, reemplazando librerías obsoletas e introduciendo soluciones optimizadas sin afectar UI/UX.</li>
+          <li>Refactoricé flujos de trabajo de procesamiento de datos grandes, implementando técnicas de carga basada en chunks que redujeron tiempos de procesamiento de 30 minutos a solo segundos, mejorando significativamente rendimiento y usabilidad.</li>
+          <li>Trabajé en un ambiente Ágil/SCRUM, administrando tareas y sprints usando Jira.</li>
+        </ul>
+
+        <h3 class="job-title">ABDP — Desarrollador Front‑End <span class="job-duration">Nov 2022 – Ene 2024</span></h3>
+        <ul class="mb-4">
+          <li>Rediseñé y reestructuré una aplicación web de gran escala para una compañía de seguros usando Angular 15, después actualizándola a Angular 16. Lideré mejoras en la arquitectura frontend, asegurando mejor mantenibilidad y escalabilidad.</li>
+          <li>Actué como experto en Angular dentro del proyecto, proporcionando orientación sobre mejores prácticas y optimizando el desarrollo de UI, a menudo trabajando sin diseños finalizados.</li>
+          <li>Resolví problemas importantes de compatibilidad durante la actualización a Angular 16 refactorizando dependencias obsoletas y desarrollando librerías internas personalizadas para reemplazar soluciones de terceros desactualizadas.</li>
+          <li>Mejoré el flujo de trabajo de desarrollo integrando ngx‑bootstrap expanded features, mejorando significativamente la implementación del diseño y proporcionando mejor control sobre componentes UI.</li>
+          <li>Diseñé e implementé librerías de desarrollo internas, optimizando flujos de trabajo del equipo, extendiendo capacidades de Angular y mentoreando miembros del equipo en su uso y personalización.</li>
+        </ul>
+
+        <h3 class="job-title">Alseam — Desarrollador Full‑Stack & SRE <span class="job-duration">Jul 2021 – Nov 2022</span></h3>
+        <ul class="mb-4">
+          <li>Diseñé y desarrollé sistemas internos, dashboards y planificadores para varios clientes usando el stack MEAN (MongoDB, Express, Angular, Node.js), asegurando soluciones escalables y eficientes.</li>
+          <li>Rediseñé y modernicé UI/UX, transformando interfaces obsoletas en experiencias responsivas, visualmente intuitivas con mejor contraste, espaciado y accesibilidad para todos los tamaños de pantalla.</li>
+          <li>Implementé componentes UI avanzados usando Angular, Bootstrap, Material UI y ngx‑bootstrap expanded features, mejorando consistencia de diseño y eficiencia del desarrollador.</li>
+          <li>Desarrollé APIs RESTful con autenticación JWT, habilitando comunicación segura y fluida entre sistemas front‑end y back‑end.</li>
+          <li>Configuré y optimicé servidores NGINX y Digital Ocean, mejorando rendimiento y asegurando acceso usando reglas de firewall UFW.</li>
+        </ul>
+
+        <h3 class="job-title">Katze Records — Desarrollador Full‑Stack & SRE <span class="job-duration">Ene 2018 – Abr 2021</span></h3>
+        <ul class="mb-4">
+          <li>Planifiqué, diseñé y desarrollé Katze Community, una Aplicación de Página Única (SPA) construida con el stack MEAN (MongoDB, Express, Angular, Node.js), manejando el ciclo completo de desarrollo desde concepto hasta despliegue.</li>
+          <li>Construí y actualmente mantengo un servidor DigitalOcean con NGINX, implementando balanceadores de carga y proxy inverso para optimizar rendimiento y escalabilidad.</li>
+          <li>Integré autenticación JWT para asegurar acceso seguro de usuarios y proteger endpoints de API.</li>
+          <li>Configuré reglas de firewall UFW, mejorando seguridad y restringiendo acceso no autorizado.</li>
+        </ul>
+
+        <h3 class="job-title">Freelance — Full‑Stack | SRE | ETL | Datos & IA <span class="job-duration">2018 – Presente</span></h3>
+        <ul class="mb-4">
+          <li>Lideré el diseño, desarrollo y despliegue de aplicaciones web para diversos clientes, construyendo soluciones escalables y de alto rendimiento desde cero usando Angular, Node.js, NestJS, Python, Django, Flask, C# .NET, MongoDB, MySQL y otras tecnologías modernas.</li>
+          <li>Administré múltiples equipos de desarrollo, asegurando la entrega exitosa de productos de alta calidad estableciendo flujos de trabajo efectivos, procesos de revisión de código y mejores prácticas de desarrollo.</li>
+          <li>Proporcioné mentoría técnica experta y consultoría, guiando equipos y desarrolladores junior en Angular, TypeScript, gestión de estado (NgRx), diseño de API, optimización de bases de datos, despliegue en la nube y DevOps.</li>
+          <li>Configuré y mantuve infraestructura en la nube usando NGINX, Digital Ocean, Google Cloud, AWS, Azure, Kubernetes y Docker, asegurando rendimiento, seguridad y escalabilidad.</li>
+          <li>Integré prácticas DevOps implementando pipelines CI/CD con GitHub Actions, mejorando eficiencia de despliegue y reduciendo tiempo de inactividad.</li>
+          <li>Diseñé e implementé Redes Neuronales usando Machine Learning para mejorar el uso de datos y optimizar procesos de toma de decisiones.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section container py-5">
+      <div lang="en">
+        <h2><span class="material-icons accent">construction</span> Technologies&nbsp;& Tools</h2>
+        
+        <h4 class="mt-4 mb-2">Programming Languages</h4>
+        <p class="mb-3">
+          <span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Python</span>
+          <span class="chip">C#</span><span class="chip">Go</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Front-End Development</h4>
+        <p class="mb-3">
+          <span class="chip">Angular</span><span class="chip">React</span><span class="chip">Vue</span>
+          <span class="chip">Ionic</span><span class="chip">Angular Universal</span><span class="chip">NgRx</span>
+          <span class="chip">Redux</span><span class="chip">RxJS</span><span class="chip">Vite</span>
+          <span class="chip">jQuery</span><span class="chip">HTML</span><span class="chip">CSS</span>
+          <span class="chip">SASS</span><span class="chip">LESS</span><span class="chip">Bootstrap</span>
+          <span class="chip">Material UI</span><span class="chip">ngx-bootstrap</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Back-End Development</h4>
+        <p class="mb-3">
+          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">NestJS</span>
+          <span class="chip">Fastify</span><span class="chip">Django</span><span class="chip">Flask</span>
+          <span class="chip">.NET</span><span class="chip">Next.js</span><span class="chip">Nuxt</span>
+          <span class="chip">JWT</span><span class="chip">Passport</span><span class="chip">RESTful APIs</span>
+          <span class="chip">GraphQL</span><span class="chip">WebSockets</span><span class="chip">Swagger</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Databases & Big Data</h4>
+        <p class="mb-3">
+          <span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">SQLite</span>
+          <span class="chip">Redis</span><span class="chip">SQL Server</span><span class="chip">Azure SQL</span>
+          <span class="chip">Amazon RedShift</span><span class="chip">Azure Synapse</span>
+          <span class="chip">Pandas</span><span class="chip">NumPy</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Cloud & DevOps</h4>
+        <p class="mb-3">
+          <span class="chip">AWS</span><span class="chip">Google Cloud</span><span class="chip">Azure</span>
+          <span class="chip">Digital Ocean</span><span class="chip">Docker</span><span class="chip">Kubernetes</span>
+          <span class="chip">NGINX</span><span class="chip">GitHub Actions</span><span class="chip">AWS Lambda</span>
+          <span class="chip">Azure Functions</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Data Science & AI</h4>
+        <p class="mb-3">
+          <span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">Keras</span>
+          <span class="chip">Scikit-learn</span><span class="chip">Power BI</span><span class="chip">Tableau</span>
+          <span class="chip">Matplotlib</span><span class="chip">Plotly</span><span class="chip">Apache Airflow</span>
+          <span class="chip">AWS Glue</span><span class="chip">Azure Data Factory</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Testing & QA</h4>
+        <p class="mb-3">
+          <span class="chip">Jest</span><span class="chip">Jasmine</span><span class="chip">Karma</span>
+          <span class="chip">Mocha</span><span class="chip">Chai</span><span class="chip">Vitest</span>
+          <span class="chip">Artillery</span>
+        </p>
+      </div>
+      
+      <div lang="es">
+        <h2><span class="material-icons accent">construction</span> Tecnologías&nbsp;y&nbsp;Herramientas</h2>
+        
+        <h4 class="mt-4 mb-2">Lenguajes de Programación</h4>
+        <p class="mb-3">
+          <span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Python</span>
+          <span class="chip">C#</span><span class="chip">Go</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Desarrollo Front-End</h4>
+        <p class="mb-3">
+          <span class="chip">Angular</span><span class="chip">React</span><span class="chip">Vue</span>
+          <span class="chip">Ionic</span><span class="chip">Angular Universal</span><span class="chip">NgRx</span>
+          <span class="chip">Redux</span><span class="chip">RxJS</span><span class="chip">Vite</span>
+          <span class="chip">jQuery</span><span class="chip">HTML</span><span class="chip">CSS</span>
+          <span class="chip">SASS</span><span class="chip">LESS</span><span class="chip">Bootstrap</span>
+          <span class="chip">Material UI</span><span class="chip">ngx-bootstrap</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Desarrollo Back-End</h4>
+        <p class="mb-3">
+          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">NestJS</span>
+          <span class="chip">Fastify</span><span class="chip">Django</span><span class="chip">Flask</span>
+          <span class="chip">.NET</span><span class="chip">Next.js</span><span class="chip">Nuxt</span>
+          <span class="chip">JWT</span><span class="chip">Passport</span><span class="chip">APIs REST</span>
+          <span class="chip">GraphQL</span><span class="chip">WebSockets</span><span class="chip">Swagger</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Bases de Datos y Big Data</h4>
+        <p class="mb-3">
+          <span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">SQLite</span>
+          <span class="chip">Redis</span><span class="chip">SQL Server</span><span class="chip">Azure SQL</span>
+          <span class="chip">Amazon RedShift</span><span class="chip">Azure Synapse</span>
+          <span class="chip">Pandas</span><span class="chip">NumPy</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Cloud y DevOps</h4>
+        <p class="mb-3">
+          <span class="chip">AWS</span><span class="chip">Google Cloud</span><span class="chip">Azure</span>
+          <span class="chip">Digital Ocean</span><span class="chip">Docker</span><span class="chip">Kubernetes</span>
+          <span class="chip">NGINX</span><span class="chip">GitHub Actions</span><span class="chip">AWS Lambda</span>
+          <span class="chip">Azure Functions</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Ciencia de Datos e IA</h4>
+        <p class="mb-3">
+          <span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">Keras</span>
+          <span class="chip">Scikit-learn</span><span class="chip">Power BI</span><span class="chip">Tableau</span>
+          <span class="chip">Matplotlib</span><span class="chip">Plotly</span><span class="chip">Apache Airflow</span>
+          <span class="chip">AWS Glue</span><span class="chip">Azure Data Factory</span>
+        </p>
+
+        <h4 class="mt-4 mb-2">Testing y QA</h4>
+        <p class="mb-3">
+          <span class="chip">Jest</span><span class="chip">Jasmine</span><span class="chip">Karma</span>
+          <span class="chip">Mocha</span><span class="chip">Chai</span><span class="chip">Vitest</span>
+          <span class="chip">Artillery</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section container py-5">
+      <div lang="en">
+        <h2><span class="material-icons accent">code</span> Projects</h2>
+        <h3 class="job-title">Bootstrap‑Expanded‑Features <small class="text-muted">(Ongoing)</small></h3>
+        <p class="mb-3">
+          <strong>JavaScript Utility Library | Open Source | UI/UX Enhancement</strong><br>
+          Developed and maintain an open‑source library that extends Bootstrap's utility classes, providing new functionalities and dynamic behavior without modifying Bootstrap's core.
+          Enables custom breakpoints, spacing utilities, hover effects, dynamic visibility, and more, offering enhanced flexibility in CSS class‑based styling.
+          Designed for full compatibility with Bootstrap, making it easy to integrate into existing projects without conflicts.
+        </p>
+        <p class="mb-3">
+          <a href="https://www.npmjs.com/package/ngx-bootstrap-expanded-features" target="_blank"><span class="material-icons">download</span> npm package</a> &bull;
+          <a href="https://ngx-bootstrap-expanded-features.vercel.app/" target="_blank"><span class="material-icons">visibility</span> Demo website</a>
+        </p>
+
+        <h3 class="job-title">Logs of Change <small class="text-muted">(Ongoing)</small></h3>
+        <p class="mb-3">
+          <strong>Open Source | Change Log Management | Backend Development</strong><br>
+          Developed and maintain an open‑source project that automates and structures change log generation, providing clear version tracking for software projects.
+          Built using NestJS and Docker, ensuring a modular, scalable, and containerized backend architecture.
+          Designed to be extensible and customizable, allowing seamless integration into various software projects.
+        </p>
+        <p class="mb-3">
+          <a href="https://github.com/LynxPardelle/logs-of-change" target="_blank"><span class="material-icons">code</span> GitHub repo</a>
+        </p>
+      </div>
+
+      <div lang="es">
+        <h2><span class="material-icons accent">code</span> Proyectos</h2>
+        <h3 class="job-title">Bootstrap‑Expanded‑Features <small class="text-muted">(En curso)</small></h3>
+        <p class="mb-3">
+          <strong>Librería JavaScript | Código Abierto | Mejora UI/UX</strong><br>
+          Desarrollé y mantengo una librería de código abierto que extiende las clases de utilidad de Bootstrap, proporcionando nuevas funcionalidades y comportamiento dinámico sin modificar el núcleo de Bootstrap.
+          Permite breakpoints personalizados, utilidades de espaciado, efectos hover, visibilidad dinámica y más, ofreciendo mayor flexibilidad en el estilo basado en clases CSS.
+          Diseñada para total compatibilidad con Bootstrap, facilitando la integración en proyectos existentes sin conflictos.
+        </p>
+        <p class="mb-3">
+          <a href="https://www.npmjs.com/package/ngx-bootstrap-expanded-features" target="_blank"><span class="material-icons">download</span> Paquete npm</a> &bull;
+          <a href="https://ngx-bootstrap-expanded-features.vercel.app/" target="_blank"><span class="material-icons">visibility</span> Sitio demo</a>
+        </p>
+
+        <h3 class="job-title">Logs of Change <small class="text-muted">(En curso)</small></h3>
+        <p class="mb-3">
+          <strong>Código Abierto | Gestión de Logs de Cambio | Desarrollo Backend</strong><br>
+          Desarrollé y mantengo un proyecto de código abierto que automatiza y estructura la generación de logs de cambio, proporcionando seguimiento claro de versiones para proyectos de software.
+          Construido usando NestJS y Docker, asegurando una arquitectura backend modular, escalable y en contenedores.
+          Diseñado para ser extensible y personalizable, permitiendo integración perfecta en varios proyectos de software.
+        </p>
+        <p class="mb-3">
+          <a href="https://github.com/LynxPardelle/logs-of-change" target="_blank"><span class="material-icons">code</span> Repositorio GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education" class="section container py-5">
+      <div lang="en">
+        <h2><span class="material-icons accent">school</span> Education & Certifications</h2>
+        <ul class="mb-4">
+          <li><strong>Data Scientist Diploma</strong> &mdash; Bedu (Aug 2024 – Jan 2025)</li>
+          <li><strong>Data Engineering Certification</strong> &mdash; Coderhouse (Oct 2023 – Jan 2024)</li>
+          <li><strong>Data Analytics Certification</strong> &mdash; Coderhouse (Jan – Mar 2024)</li>
+          <li><strong>Python Certification</strong> &mdash; Coderhouse (Oct 2023 – Jan 2024)</li>
+          <li><strong>Back‑End Certification</strong> &mdash; Coderhouse (Jul – Dec 2023)</li>
+          <li><strong>SQL Certification</strong> &mdash; Coderhouse (Jul – Sep 2023)</li>
+          <li><strong>Angular Certification</strong> &mdash; Coderhouse (Aug – Sep 2022)</li>
+          <li><strong>Audio Engineering</strong> &mdash; G Martell College of Audio (2012 – 2015)</li>
+          <li><strong>Multiple Development Courses</strong> &mdash; Platzi & Udemy (2018 – Present)</li>
+        </ul>
+      </div>
+      <div lang="es">
+        <h2><span class="material-icons accent">school</span> Educación & Certificaciones</h2>
+        <ul class="mb-4">
+          <li><strong>Diplomado en Ciencia de Datos</strong> &mdash; Bedu (Ago 2024 – Ene 2025)</li>
+          <li><strong>Certificación en Data Engineering</strong> &mdash; Coderhouse (Oct 2023 – Ene 2024)</li>
+          <li><strong>Certificación en Data Analytics</strong> &mdash; Coderhouse (Ene – Mar 2024)</li>
+          <li><strong>Certificación en Python</strong> &mdash; Coderhouse (Oct 2023 – Ene 2024)</li>
+          <li><strong>Certificación en Back‑End</strong> &mdash; Coderhouse (Jul – Dic 2023)</li>
+          <li><strong>Certificación en SQL</strong> &mdash; Coderhouse (Jul – Sep 2023)</li>
+          <li><strong>Certificación en Angular</strong> &mdash; Coderhouse (Ago – Sep 2022)</li>
+          <li><strong>Ingeniería en Audio</strong> &mdash; Colegio G Martell (2012 – 2015)</li>
+          <li><strong>Múltiples Cursos de Desarrollo</strong> &mdash; Platzi y Udemy (2018 – Presente)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section container py-5">
+      <div lang="en">
+        <h2><span class="material-icons accent">mail</span> Contact</h2>
+        <p class="mb-3"><span class="material-icons">place</span> CDMX, Mexico</p>
+        <p class="mb-3"><span class="material-icons">call</span> +52&nbsp;(55)&nbsp;2269‑9563</p>
+        <p class="mb-3">
+          <a href="mailto:lynxpardelle@lynxpardelle.com"><span class="material-icons">email</span> Email</a> &nbsp;|&nbsp;
+          <a href="https://github.com/LynxPardelle" target="_blank"><span class="material-icons">code</span> GitHub</a> &nbsp;|&nbsp;
+          <a href="https://linkedin.com/in/alecjmr" target="_blank"><span class="material-icons">link</span> LinkedIn</a> &nbsp;|&nbsp;
+          <a href="https://lynxpardelle.com" target="_blank"><span class="material-icons">public</span> Website</a>
+        </p>
+      </div>
+      <div lang="es">
+        <h2><span class="material-icons accent">mail</span> Contacto</h2>
+        <p class="mb-3"><span class="material-icons">place</span> CDMX, México</p>
+        <p class="mb-3"><span class="material-icons">call</span> +52&nbsp;(55)&nbsp;2269‑9563</p>
+        <p class="mb-3">
+          <a href="mailto:lynxpardelle@lynxpardelle.com"><span class="material-icons">email</span> Correo</a> &nbsp;|&nbsp;
+          <a href="https://github.com/LynxPardelle" target="_blank"><span class="material-icons">code</span> GitHub</a> &nbsp;|&nbsp;
+          <a href="https://linkedin.com/in/alecjmr" target="_blank"><span class="material-icons">link</span> LinkedIn</a> &nbsp;|&nbsp;
+          <a href="https://lynxpardelle.com" target="_blank"><span class="material-icons">public</span> Sitio web</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Alec Jonathan Montaño Romero &mdash; Built with <span class="material-icons accent">favorite</span> and Bootstrap.
+  </footer>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Language Toggle Script -->
+  <script src="js/language-toggle.js"></script>
+
+</body>
+</html>
