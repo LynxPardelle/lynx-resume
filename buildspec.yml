@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "⚙️ No dependencies to install"
+
+  build:
+    commands:
+      - echo "🧱 No build step required"
+
+  post_build:
+    commands:
+      - echo "🚀 Sync to S3 ($S3_BUCKET)"
+      - aws s3 sync frontend/ "s3://$S3_BUCKET" --delete
+      - echo "🧼 Invalidate CloudFront ($CF_DIST_ID)"
+      - aws cloudfront create-invalidation \
+          --distribution-id "$CF_DIST_ID" \
+          --paths "/*"
+
+artifacts:
+  files: []          # no artefactos porque ya hicimos el sync
