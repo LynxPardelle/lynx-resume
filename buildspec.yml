@@ -1,7 +1,5 @@
 ---
-
 version: 0.2
-
 phases:
   install:
     commands:
@@ -9,8 +7,8 @@ phases:
 
   build:
     commands:
-      - echo "No build step required"
-
+      - echo "📦 Zipping Lambda code"
+      - zip -r ../function.zip .
   post_build:
     commands:
       - echo "Sync to S3 ($S3_BUCKET)"
@@ -20,6 +18,11 @@ phases:
         aws cloudfront create-invalidation \
           --distribution-id "$CF_DIST_ID" \
           --paths "/*"
-
+      - echo "🚀 Updating Lambda function"
+      - aws lambda update-function-code \
+          --function-name resume-lynx-pardelle-comment \
+          --zip-file fileb://function.zip \
+          --publish
 artifacts:
-  files: []
+  files: 
+    - function.zip
