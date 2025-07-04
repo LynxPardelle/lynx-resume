@@ -1,28 +1,29 @@
 ---
 version: 0.2
-phases:
-  install:
-    commands:
-      - echo "No dependencies to install"
 
+env:
+  variables:
+    LAMBDA_NAME: "resume-lynx-pardelle-comment"
+    LAMBDA_DIR: "lambda"
+    FRONTEND_DIR: "frontend"
+
+phases:
   build:
     commands:
-      - echo "📦 Zipping Lambda code"
+      - echo "Zipping Lambda code"
+      - cd "$LAMBDA_DIR"
       - zip -r ../function.zip .
+      - cd ..
+
   post_build:
     commands:
-      - echo "Sync to S3 ($S3_BUCKET)"
-      - aws s3 sync frontend/ "s3://$S3_BUCKET" --delete
-      - |
-        echo "Invalidate CloudFront"
-        aws cloudfront create-invalidation \
-          --distribution-id "$CF_DIST_ID" \
-          --paths "/*"
-      - echo "🚀 Updating Lambda function"
-      - aws lambda update-function-code \
-          --function-name resume-lynx-pardelle-comment \
-          --zip-file fileb://function.zip \
-          --publish
+      - echo "Sync frontend to S3"
+      - aws s3 sync "$FRONTEND_DIR/" "s3://$S3_BUCKET"
+      - echo "Invalidate CloudFront"
+      - aws cloudfront create-invalidation --distribution-id "$CF_DIST_ID" --paths "/*"
+      - echo "Updating Lambda function"
+      - aws lambda update-function-code --function-name "$LAMBDA_NAME" --zip-file fileb://function.zip --publish
+
 artifacts:
-  files: 
+  files:
     - function.zip
