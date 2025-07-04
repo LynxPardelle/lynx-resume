@@ -1,3 +1,4 @@
+---
 version: 0.2
 
 phases:
@@ -13,8 +14,9 @@ phases:
     commands:
       - echo "Sync to S3 ($S3_BUCKET)"
       - aws s3 sync frontend/ "s3://$S3_BUCKET" --delete
-      - echo "Invalidate CloudFront ($CF_DIST_ID)"
-      - aws cloudfront create-invalidation \
+      - |
+        echo "Invalidate CloudFront"
+        aws cloudfront create-invalidation \
           --distribution-id "$CF_DIST_ID" \
           --paths "/*"
 
