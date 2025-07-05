@@ -10,6 +10,10 @@ const COMMENTS_API_URL = 'https://nw0bgoqapb.execute-api.us-east-1.amazonaws.com
  */
 async function fetchComments() {
   try {
+    // Only to this if we are on resume.lynxpardelle.com
+    if (window.location.hostname !== 'resume.lynxpardelle.com') {
+      return []; // Return empty array if not on the correct domain
+    }
     const response = await fetch(COMMENTS_API_URL);
     
     if (!response.ok) {
