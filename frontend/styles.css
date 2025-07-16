@@ -68,6 +68,99 @@ footer {
   font-size: 0.85rem;
 }
 
+/* Comments section styles */
+.comment {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,204,0,0.2) !important;
+  transition: all 0.3s ease;
+}
+.comment:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,204,0,0.3) !important;
+}
+.comment-header {
+  color: var(--gold) !important;
+  font-weight: 500;
+}
+
+/* Comment form styles */
+.comment-form .form-label {
+  color: var(--gold);
+  font-weight: 600;
+}
+.comment-form .form-control {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,204,0,0.3);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+.comment-form .form-control:focus {
+  background-color: rgba(255,255,255,0.08);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.2rem rgba(255,204,0,0.25);
+  color: var(--white);
+}
+.comment-form .form-control::placeholder {
+  color: rgba(248,249,250,0.5);
+}
+.comment-form .btn-primary {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.comment-form .btn-primary:hover,
+.comment-form .btn-primary:focus {
+  background-color: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+.comment-form .btn-primary:disabled {
+  background-color: rgba(255,204,0,0.5);
+  border-color: rgba(255,204,0,0.5);
+  color: rgba(13,13,13,0.7);
+  transform: none;
+}
+
+/* Character counter styles */
+#character-counter,
+#character-counter-es {
+  transition: color 0.3s ease;
+}
+
+/* Alert styles for comments */
+#comment-message .alert,
+#comment-message-es .alert {
+  border: none;
+  border-radius: 8px;
+}
+#comment-message .alert-success,
+#comment-message-es .alert-success {
+  background-color: rgba(40,167,69,0.2);
+  color: #28a745;
+  border-left: 4px solid #28a745;
+}
+#comment-message .alert-warning,
+#comment-message-es .alert-warning {
+  background-color: rgba(255,193,7,0.2);
+  color: #ffc107;
+  border-left: 4px solid #ffc107;
+}
+#comment-message .alert-danger,
+#comment-message-es .alert-danger {
+  background-color: rgba(220,53,69,0.2);
+  color: #dc3545;
+  border-left: 4px solid #dc3545;
+}
+#comment-message .alert-info,
+#comment-message-es .alert-info {
+  background-color: rgba(13,202,240,0.2);
+  color: #0dcaf0;
+  border-left: 4px solid #0dcaf0;
+}
+
 /* Accessibility: Focus styles */
 a:focus, button:focus {
   outline: 3px solid var(--red);

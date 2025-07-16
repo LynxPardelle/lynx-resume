@@ -4,6 +4,7 @@ version: 0.2
 env:
   variables:
     LAMBDA_NAME: "resume-lynx-pardelle-comment"
+    CONFIG_LAMBDA_NAME: "resume-lynx-pardelle-config"
     LAMBDA_DIR: "lambda"
     FRONTEND_DIR: "frontend"
 
@@ -12,7 +13,9 @@ phases:
     commands:
       - echo "Zipping Lambda code"
       - cd "$LAMBDA_DIR"
-      - zip -r ../function.zip .
+      - zip -r ../function.zip . -x "*.example" "*.md"
+      - echo "Creating separate zip for config Lambda"
+      - zip ../config-function.zip config.mjs
       - cd ..
 
   post_build:
@@ -21,9 +24,12 @@ phases:
       - aws s3 sync "$FRONTEND_DIR/" "s3://$S3_BUCKET"
       - echo "Invalidate CloudFront"
       - aws cloudfront create-invalidation --distribution-id "$CF_DIST_ID" --paths "/*"
-      - echo "Updating Lambda function"
+      - echo "Updating comment Lambda function"
       - aws lambda update-function-code --function-name "$LAMBDA_NAME" --zip-file fileb://function.zip --publish
+      - echo "Updating config Lambda function"
+      - aws lambda update-function-code --function-name "$CONFIG_LAMBDA_NAME" --zip-file fileb://config-function.zip --publish
 
 artifacts:
   files:
     - function.zip
+    - config-function.zip

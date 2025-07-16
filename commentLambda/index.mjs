@@ -14,7 +14,7 @@ export const handler = async (event) => {
   console.log('event.headers', event.headers);
   // Stablish CORS headers
   const headers = {
-    'Access-Control-Allow-Origin': 'http://resume-lynx-pardelle.s3-website-us-east-1.amazonaws.com,https://resume.lynxpardelle.com',
+    'Access-Control-Allow-Origin': 'https://resume.lynxpardelle.com',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'GET, POST',
   };

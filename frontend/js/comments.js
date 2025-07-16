@@ -1,25 +1,22 @@
 /**
  * Comments functionality for loading and displaying comments from API
  */
-
-const COMMENTS_API_URL = 'https://nw0bgoqapb.execute-api.us-east-1.amazonaws.com/default/comments';
-
 /**
  * Fetches comments from the API
  * @returns {Promise<any>} The comments data
  */
-async function fetchComments() {
+async function fetchComments(url, domain) {
   try {
-    // Only to this if we are on resume.lynxpardelle.com
-    if (window.location.hostname !== 'resume.lynxpardelle.com') {
+    // Only to this if we are on production domain
+    if (window.location.hostname !== domain) {
       return []; // Return empty array if not on the correct domain
     }
-    const response = await fetch(COMMENTS_API_URL);
-    
+    const response = await fetch(url);
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     const data = await response.json();
     return data;
   } catch (error) {
@@ -34,7 +31,7 @@ async function fetchComments() {
  */
 function renderComments(commentsData) {
   const commentsSection = document.getElementById('comments');
-  
+
   if (!commentsSection) {
     console.error('Comments section not found');
     return;
@@ -47,7 +44,7 @@ function renderComments(commentsData) {
     // Create comments container
     const commentsContainer = document.createElement('div');
     commentsContainer.className = 'container py-5';
-    
+
     // Add title
     const title = document.createElement('h2');
     title.innerHTML = '<span class="material-icons accent">comment</span> Comments';
@@ -55,7 +52,7 @@ function renderComments(commentsData) {
 
     // Handle different data structures
     let comments = [];
-    
+
     if (Array.isArray(commentsData)) {
       comments = commentsData;
     } else if (commentsData.comments && Array.isArray(commentsData.comments)) {
@@ -78,10 +75,10 @@ function renderComments(commentsData) {
       comments.forEach((comment, index) => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment mb-3 p-3 border rounded';
-        
+
         // Handle different comment structures
         let commentContent = '';
-        
+
         if (typeof comment === 'string') {
           commentContent = comment;
         } else if (comment.body || comment.content || comment.message) {
@@ -97,7 +94,7 @@ function renderComments(commentsData) {
         if (comment.author || comment.date || comment.timestamp) {
           const commentHeader = document.createElement('div');
           commentHeader.className = 'comment-header mb-2 text-muted small';
-          
+
           let headerText = '';
           if (comment.author) headerText += `By: ${comment.author}`;
           if (comment.date || comment.timestamp) {
@@ -105,7 +102,7 @@ function renderComments(commentsData) {
             if (headerText) headerText += ' | ';
             headerText += `Date: ${date}`;
           }
-          
+
           commentHeader.textContent = headerText;
           commentDiv.appendChild(commentHeader);
         }
@@ -113,7 +110,7 @@ function renderComments(commentsData) {
         // Add comment content
         const commentText = document.createElement('div');
         commentText.className = 'comment-content';
-        
+
         // If content looks like JSON, format it nicely
         if (commentContent.startsWith('{') || commentContent.startsWith('[')) {
           const preElement = document.createElement('pre');
@@ -124,7 +121,7 @@ function renderComments(commentsData) {
         } else {
           commentText.textContent = commentContent;
         }
-        
+
         commentDiv.appendChild(commentText);
         commentsList.appendChild(commentDiv);
       });
@@ -133,7 +130,7 @@ function renderComments(commentsData) {
     }
 
     commentsSection.appendChild(commentsContainer);
-    
+
   } catch (error) {
     console.error('Error rendering comments:', error);
     commentsSection.innerHTML = `
@@ -191,10 +188,13 @@ function showCommentsError(error) {
  * Main function to load and display comments
  */
 async function loadComments() {
-  showCommentsLoading();
-  
   try {
-    const commentsData = await fetchComments();
+    showCommentsLoading();
+    const config = await window.ConfigLoader.waitForConfig();
+    if (!config || !config.API || !config.DOMAIN) {
+      throw new Error('Configuration not loaded properly.');
+    }
+    const commentsData = await fetchComments(config.API.COMMENTS_URL, config.DOMAIN.PRODUCTION);
     renderComments(commentsData);
   } catch (error) {
     showCommentsError(error);
